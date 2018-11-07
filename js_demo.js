@@ -19,7 +19,6 @@ soundMaker("Wooof", 5);
 
 
 
-
 function summation(arr) {
 
   let sum = 1;
@@ -45,3 +44,4 @@ function summation(arr) {
 }
 
 console.log(summation([1,2,3,4]));
+
