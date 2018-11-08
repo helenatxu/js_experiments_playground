@@ -11,6 +11,16 @@ let timeToWait = 4000; //ms
 global.setTimeout(callback, timeToWait);
 
 
+// callbacks
+function logIfEven(num) {
+  if (num % 2 === 0) {
+    console.log(`${num} is an even number!`);
+  }
+}
+
+[1, 2, 3, 4, 5, 6].forEach(logIfEven);
+
+
 
 
 // ES5 way
