@@ -22,6 +22,14 @@ function logIfEven(num) {
 
 
 
+function myForEach(array, cb) {
+  for (let i = 0; i < array.length; i++) {
+    cb(array[i]);
+  }
+}
+
+myForEach([1, 2, 3], logIfEven);
+
 
 // ES5 way
 
