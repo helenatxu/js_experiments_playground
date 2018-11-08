@@ -21,7 +21,7 @@ function logIfEven(num) {
 [1, 2, 3, 4, 5, 6].forEach(logIfEven);
 
 
-
+// forEach rewrite
 function myForEach(array, cb) {
   for (let i = 0; i < array.length; i++) {
     cb(array[i]);
@@ -29,6 +29,17 @@ function myForEach(array, cb) {
 }
 
 myForEach([1, 2, 3], logIfEven);
+
+
+
+// Another callback 
+[1, 2, 3].forEach(function (num) {
+  if ((num % 2) === 0) {
+    console.log(num);
+  }
+});
+
+
 
 
 // ES5 way
