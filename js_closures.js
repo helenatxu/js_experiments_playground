@@ -39,3 +39,24 @@ function summation(arr) {
 }
 
 console.log(summation([1,2,3,4]));
+
+
+
+  // closure
+function createCounter() {
+  let count = 0;
+
+  // here ++count means increment the value of the count variable by 1 and then the count variable is evaluated in the statement.
+  // count++ means the count variable is evaluated in the statement and then the value is incremented by 1. If we used count++ our counter would be off by 1.
+  return () => ++count;
+}
+
+console.log("counter");
+
+let counter = createCounter();
+console.log("counter 1", counter()); // => 1
+console.log("counter 2", counter()); // => 2
+counter.count; // undefined
+
+let counter2 = createCounter();
+console.log(counter2()); // => 1
