@@ -56,3 +56,17 @@ function mysteryScoping5() {
   console.log(x);
 }
 mysteryScoping5();
+
+
+
+// madLib
+
+// Write a function that takes three strings - a verb, an adjective, and a noun - uppercases and interpolates them into the sentence "We shall VERB the ADJECTIVE NOUN". Use ES6 template literals.
+// ex. madLib('make', 'best', 'guac'); "We shall MAKE the BEST GUAC." ```
+
+
+function madLib(verb, adj, noum) {
+  return `We shall ${verb.toUpperCase()} the ${adj.toUpperCase()} ${noum.toUpperCase()}`;
+}
+
+console.log(madLib('make', 'best', 'guac'));
