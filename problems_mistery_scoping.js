@@ -70,3 +70,14 @@ function madLib(verb, adj, noum) {
 }
 
 console.log(madLib('make', 'best', 'guac'));
+
+
+// isSubstring
+
+// Create a function that check is substring is part of a string
+
+function isSubstring(fullString, subString) {
+  return fullString.indexOf(subString) > -1;
+}
+console.log(isSubstring("time to program", "time"));
+console.log(isSubstring("Jump for joy", "joys"));
