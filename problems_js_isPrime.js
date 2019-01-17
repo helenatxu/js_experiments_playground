@@ -3,12 +3,14 @@
 // Otherwise, false. Assume number is a positive integer.
 
 function isPrime(number) {
-  var divisor = 3; // as 2 and 3 are primes
+  var divisor = 2; // as 2 is prime
   while (divisor < number) {
-    divisor ++;
+    console.log('number / divisor', number, divisor);
     if (number % divisor === 0)
       return false;
-    else if ((number/divisor) < divisor) break;
+    else if ((number/divisor) < divisor) 
+      break;
+    divisor ++;
   }
   return true;
 }
