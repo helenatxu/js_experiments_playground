@@ -4,10 +4,35 @@ function Dog(name, age, color) {
   this.color = color;
 }
 
+// We set instance methods for the object on the prototype
 Dog.prototype.bark = function() {
-    console.log(this.name + " says: Woof, woof!!!");
-  }
+  console.log(this.name + " says: Woof, woof!!!");
+};
 
-let doggie = new Dog("Lluna", 5, "Yellow");
+Dog.prototype.whichColor = function () {
+  console.log("The dog " + this.name + " is: " + this.color);
+};
 
-doggie.bark();
+let doggie1 = new Dog("Lluna", 5, "Yellow");
+doggie1.bark();
+
+console.log(Object.getPrototypeOf(doggie1));
+
+
+Dog.pack = [doggie1, new Dog("Chica", 2, "Yellow"), new Dog("Lulu", 3, "White")];
+
+Dog.party = function() {
+  Dog.pack.forEach(dog => {
+    dog.bark();
+  });
+};
+
+Dog.party();
+
+Dog.colors = function () {
+  Dog.pack.forEach(dog => {
+    dog.whichColor();
+  });
+};
+
+Dog.colors();
