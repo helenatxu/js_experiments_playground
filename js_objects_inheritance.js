@@ -10,20 +10,21 @@ Animal.prototype = {
 }
 
 function Dog(name, color, age) {
-  this.name = name;
+  this.name = name; // own attributes
   this.color = color;
   this.age = age;
-  this.legsNumber = 4;
 }
 
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;
+Dog.prototype = Object.create(Animal.prototype); //creates a new object of Animal's prototype and sets it to Dog prototype
+Dog.prototype.constructor = Dog; // sets the inherited constructor to Dog
+
+Dog.prototype.legsNumber = 4; // prototype attribute
 
 Dog.prototype.bark = function () {
   console.log(this.name + " says: Woof, woof!");
 };
 
-Dog.prototype.eat = function () {
+Dog.prototype.eat = function () { // overrides eat inherited method
   console.log("Niam, Niam");
 };
 
