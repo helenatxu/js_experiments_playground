@@ -13,8 +13,14 @@ Dog.prototype.whichColor = function () {
   console.log("The dog " + this.name + " is: " + this.color);
 };
 
+Dog.prototype.numLegs = 4;
+
+
 let doggie1 = new Dog("Lluna", 5, "Yellow");
 doggie1.bark();
+
+console.log("The dog " + doggie1.name + " has " + doggie1.numLegs + " legs.");
+
 
 console.log(Object.getPrototypeOf(doggie1));
 
