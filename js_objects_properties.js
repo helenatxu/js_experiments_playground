@@ -6,7 +6,7 @@ function Dog(name, age, color) {
 
 // We create a new prototype to set properties and instance methods for the object
 Dog.prototype = {
-  // constructor: Dog,  // define the constructor property
+  constructor: Dog,  // define the constructor property
 	numLegs: 4,
 
   whichColor: function () {
