@@ -1,13 +1,13 @@
 function Dog(name, age, color) {
-	this.name = name;
-	this.age = age;
-	this.color = color;
+  this.name = name;
+  this.age = age;
+  this.color = color;
 }
 
 // We create a new prototype to set properties and instance methods for the object
 Dog.prototype = {
   constructor: Dog,  // define the constructor property
-	numLegs: 4,
+  numLegs: 4,
 
   whichColor: function () {
     console.log("The dog " + this.name + " is: " + this.color);
@@ -27,11 +27,11 @@ let ownProps = [];
 let prototypeProps = [];
 
 for (let property in doggie) {
-	if(doggie.hasOwnProperty(property)) {
-		ownProps.push(property);
-	} else {
-		prototypeProps.push(property);
-	}
+  if(doggie.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
 }
 
 console.log("ownProps: ", ownProps); // prints ["name"]
